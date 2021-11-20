@@ -1,6 +1,6 @@
 @echo off
 chcp 936
-@REM 鉴于大部分windows使用GBK编码，本程序也使用GBK编码
+@REM 鉴于默认cmd使用GBK编码，在chcp下UTF8总有那么一丢丢小问题，所以就用GBK吧
 @REM 在VSC等请使用GB2312或GBK重新打开
 mode con:cols=80 lines=30
 echo.
