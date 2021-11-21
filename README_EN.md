@@ -1,9 +1,11 @@
 # NPC-configTool
-NPC-configTool是NPS客户端的一个简易配置程序。
-使用本工具可以快速的帮您部署，无需记忆命令。
+NPC-configTool is a simplify configuration tool of NPS client.
+By this tool,you can deploy quickly that do not remember any commands.
 
-## 关于NPS
-[Github ehang-io/nps](https://github.com/ehang-io/nps)
+## About NPS
+NPS a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.  
+The following link is the repo in Github.  
+[ehang-io/nps](https://github.com/ehang-io/nps)
 
 ## 介绍
 - 本项目主要用于学习。
