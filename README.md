@@ -1,5 +1,5 @@
 # NPC-configTool
-[中文](https://github.com/zhangjiancong/NPC-configTool/blob/main/README.md)|[English](https://github.com/zhangjiancong/NPC-configTool/blob/main/README_EN.md)  
+[ 中文 ](https://github.com/zhangjiancong/NPC-configTool/blob/main/README.md)|[ English ](https://github.com/zhangjiancong/NPC-configTool/blob/main/README_EN.md)  
 NPC-configTool是NPS客户端的一个简易配置程序。
 使用本工具可以快速的帮您部署，无需记忆命令。
 
