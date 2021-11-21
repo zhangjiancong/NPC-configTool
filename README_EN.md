@@ -1,5 +1,5 @@
 # NPC-configTool
-[中文](https://github.com/zhangjiancong/NPC-configTool/blob/main/README.md)|[English](https://github.com/zhangjiancong/NPC-configTool/blob/main/README_EN.md)
+[中文](https://github.com/zhangjiancong/NPC-configTool/blob/main/README.md)|[English](https://github.com/zhangjiancong/NPC-configTool/blob/main/README_EN.md)  
 NPC-configTool is a simplify configuration tool of NPS client.
 By this tool,you can deploy quickly that do not remember any commands.
 
