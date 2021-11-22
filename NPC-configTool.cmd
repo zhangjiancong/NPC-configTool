@@ -1,7 +1,5 @@
 @echo off
 chcp 936
-@REM 鉴于默认cmd使用GBK编码，在chcp下UTF8总有那么一丢丢小问题，所以就用GBK吧
-@REM 在VSC等请使用GB2312或GBK重新打开
 mode con:cols=80 lines=30
 echo.
 echo [提示]建议在管理员模式下运行
@@ -17,12 +15,14 @@ echo ===========================================================================
 echo                                    NAT类型检测
 echo.
 npc.exe nat -stun_addr=stun.stunprotocol.org:3478
+set natCheckErr=%errorlevel%
+if %natCheckErr% neq 0 (echo [错误]%natCheckErr%
+if %natCheckErr%==9009 echo 请检查目录输入是否正确，且目录内存在npc.exe
+echo 按任意键退出&&pause>nul&&exit)
 echo.
-echo                           Symmetric NAT无法使用P2P模式
+echo                       双方均为Symmetric NAT无法使用P2P模式
 echo ===============================================================================
 echo.
-echo 如果提示npc.exe不是内部或外部命令，也不是可运行的程序或批处理文件。
-echo 请检查上一步骤目录输入是否正确，目录内是否存在npc.exe
 echo.
 echo.
 echo ===============================================================================
@@ -50,7 +50,7 @@ echo    ⑤  P2P访问端模式
 echo.
 echo    ⑥  停止系统服务NPC_client
 echo.
-echo    ⑦  配置文件模式[下个版本搞]
+echo    ⑦  使用配置文件
 echo.
 echo    ⑧  升级NPC
 echo.
@@ -165,6 +165,22 @@ echo ===========================================================================
 echo 按回车键返回主菜单&&pause>nul
 goto main
 
+:7
+cls
+echo ===============================================================================
+echo.
+echo 使用配置文件
+echo.
+set /p configFile=直接拖入配置文件或输入配置文件路径
+echo.
+@echo on
+npc.exe -config=%configFile%
+@echo off
+echo.
+echo ===============================================================================
+echo 按回车键返回主菜单&&pause>nul
+goto main
+
 :8
 cls
 echo ===============================================================================
@@ -175,11 +191,11 @@ echo 按回车键确认
 pause>nul
 echo.
 @echo on
+npc.exe stop
 npc-update.exe update
 @echo off
 echo.
-echo 请查看上方信息
-echo.
+echo 更新完成后请手动启动
 echo.
 echo ===============================================================================
 echo 按回车键返回主菜单&&pause>nul
