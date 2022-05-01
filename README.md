@@ -11,7 +11,7 @@ Github链接
 ## 介绍
 - 本项目主要用于学习。
 - 由批处理编写。
-- 为了复习可能会写一个C的版本。
+- 【挖坑】未来技术栈将更新，基于electron运行于windows的项目
 
 ## 使用方法
 - 先下载NPC(windows_amd64_client.tar.g或windows_386_client.tar.gz)
